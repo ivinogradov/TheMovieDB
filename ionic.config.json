@@ -1,0 +1,7 @@
+{
+  "name": "TheMovieDB",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
