@@ -21,4 +21,19 @@
   } @else if (error) {
     <ion-alert header="Error" [message]="error" isOpen="true" [buttons]="['Ok']"/>
   }
+
+  <ion-list>
+    @for (movie of movies; track movie.id) {
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-img [src]="imageBaseUrl + '/w92' + movie.poster_path" alt="poster"/>
+          <ion-skeleton-text />
+        </ion-avatar>
+        <ion-label class="ion-text-wrap">
+          <h3>{{ movie.title }}</h3>
+          <p> {{ movie.release_date | date: 'Y'}}</p>
+        </ion-label>
+      </ion-item>
+    }
+  </ion-list>
 </ion-content>
