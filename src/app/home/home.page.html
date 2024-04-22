@@ -43,4 +43,7 @@
         }
       }
   </ion-list>
+  <ion-infinite-scroll (ionInfinite)="loadMore($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more movies..." />
+  </ion-infinite-scroll>
 </ion-content>
